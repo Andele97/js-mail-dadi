@@ -3,25 +3,24 @@
 //stampa un messaggio appropriato sull’esito del controllo.
 
 const listEmail = ['andrea@live.it', 'cristian@live.it', 'lina@live.it'];
-let found;
 
 const logButton = document.querySelector("button");
-const emailSelect = document.querySelector('[name="email"]');
+const emailSelect = document.querySelector('[name="email"]').value;
 
 logButton.addEventListener("click", function() {
-
+  
   const output = document.querySelector('.output');
   output.innerHTML = "";
+  let found = false;
+  
 
   for (let i = 0; i < listEmail.length; i++){
     if (emailSelect === listEmail[i]){
       found = true;
-    }else{
-      found = false;
     }
   }
 
-  if (found = listEmail) {
+  if (found == listEmail) {
     output.append('email trovata')
     output.classList.add('green')
   }else{
