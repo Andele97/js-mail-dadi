@@ -7,11 +7,31 @@
   <!-- BOOTSTRAP -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css' integrity='sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==' crossorigin='anonymous'/>
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 
   <title>Dadi</title>
 </head>
 <body>
+
+  <div class="container d-flex align-items-center">
+    <div class="ap-container text-center">
+      <h1>TIRA I DADI</h1>  
+      <div class="row-2">
+        <fieldset disabled class="d-flex justify-content-center">
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">User</label>
+            <input type="text" id="disabledTextInput" class="form-control w-100 text-center" placeholder="Numero">
+          </div>
+          <div class="mb-3 ms-5">
+            <label for="disabledTextInput" class="form-label">PC</label>
+            <input type="text" id="disabledTextInput" class="form-control w-100 text-center" placeholder="Numero">
+          </div>
+        </fieldset>
+        <p class="output"></p>
+        <button type="button" class="btn btn-secondary">Gira</button>
+      </div>
+    </div>
+  </div>
   
   <script src="js/script.js"></script>
 </body>
