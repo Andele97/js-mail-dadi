@@ -5,10 +5,11 @@
 const listEmail = ['andrea@live.it', 'cristian@live.it', 'lina@live.it'];
 
 const logButton = document.querySelector("button");
-const emailSelect = document.querySelector('[name="email"]').value;
 
 logButton.addEventListener("click", function() {
   
+  const emailSelect = document.querySelector('[name="email"]');
+  console.log(emailSelect)
   const output = document.querySelector('.output');
   output.innerHTML = "";
   let found = false;
@@ -21,10 +22,10 @@ logButton.addEventListener("click", function() {
   }
 
   if (found == listEmail) {
-    output.append('email trovata')
-    output.classList.add('green')
+    output.append('email trovata');
+    output.classList.add('green');
   }else{
-    output.append('email non trovata')
-    output.classList.add('red')
+    output.append('email non trovata');
+    output.classList.add('red');
   }
 })
