@@ -7,8 +7,10 @@ const userNumb = document.getElementById('user');
 
 turnButton.addEventListener("click", function() {
   
-  const numbUser = Math.floor(Math.random() * 6);
-  const numbPc = Math.floor(Math.random() * 6);
+  const numbUser = Math.ceil(Math.random() * 6);
+  const numbPc = Math.ceil(Math.random() * 6);
+  document.getElementById('pc').value = numbPc;
+  document.getElementById('user').value = numbUser;
 
   const output = document.querySelector('.output');
   output.innerHTML = "";
