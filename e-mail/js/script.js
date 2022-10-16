@@ -8,7 +8,7 @@ const logButton = document.querySelector("button");
 
 logButton.addEventListener("click", function() {
   
-  const emailSelect = document.querySelector('[name="email"]');
+  const emailSelect = document.querySelector('[name="email"]').value;
   console.log(emailSelect)
   const output = document.querySelector('.output');
   output.innerHTML = "";
@@ -16,16 +16,17 @@ logButton.addEventListener("click", function() {
   
 
   for (let i = 0; i < listEmail.length; i++){
-    if (emailSelect === listEmail[i]){
+    if (emailSelect == listEmail[i]){
       found = true;
     }
   }
 
-  if (found == listEmail) {
+  if (found) {
     output.append('email trovata');
     output.classList.add('green');
   }else{
     output.append('email non trovata');
     output.classList.add('red');
+    output.classList.remove('green');
   }
 })
